@@ -18,30 +18,31 @@ const { split } = require("lodash")
 //create a function that takes in parameter num, and returns num if num % 3 === 0
 
 
-// const div = (num) => {
-//     if (num % 3 === 0){
-//         return num
-//     } else {
-//         return 
-//     }
-// }
+const div = (num) => {
+    if (num % 3 === 0){
+        return num
+    } else {
+        return 
+    }
+}
 
 // a) Create a test with expect statements for each of the variables provided.
 //describe and put the function name
-// describe("divByThree", () => {
 
-//     // describes that the function does.
-//     it("checks to see if a number is divisible by 3", () => {
+describe("divByThree", () => {
+
+    // describes that the function does.
+    it("checks to see if a number is divisible by 3", () => {
   
-//       //an expect method, nested within the test block, calling on the divByThree() function, followed by the .toEqual() matcher that checks the expected output of the function return.
-//       //call function (divByThree) in method expect, passing arguments num1, num2, num3 in each test case. 
-//       //verify that the output is as expected
-//       expect(divByThree(num1)).toEqual("15 is divisible by three")
-//       expect(divByThree(num2)).toEqual("0 is divisible by three")
-//       expect(divByThree(num3)).toEqual("-7 is not divisible by three")
+      //an expect method, nested within the test block, calling on the divByThree() function, followed by the .toEqual() matcher that checks the expected output of the function return.
+      //call function (divByThree) in method expect, passing arguments num1, num2, num3 in each test case. 
+      //verify that the output is as expected
+      expect(divByThree(num1)).toEqual("15 is divisible by three")
+      expect(divByThree(num2)).toEqual("0 is divisible by three")
+      expect(divByThree(num3)).toEqual("-7 is not divisible by three")
 
-//     })
-// })
+    })
+})
 var num1 = 15
 // Expected output: "15 is divisible by three"
 var num2 = 0
@@ -55,17 +56,17 @@ var num3 = -7
 
 // b) Create the function that makes the test pass.
 
-//create function divByThree that takes in parameter num
+// create function divByThree that takes in parameter num
 // if % 3 === 0, it means its divisible by three, else no
 // using string interpolation returnt the number `is/is not divisible by` number
 
-// const divByThree = (num) => {
-//     if (num % 3 === 0){
-//         return `${num} is divisible by three`
-//     } else {
-//         return `${num} is not divisible by three`
-//     }
-// }
+const divByThree = (num) => {
+    if (num % 3 === 0){
+        return `${num} is divisible by three`
+    } else {
+        return `${num} is not divisible by three`
+    }
+}
 
 
 // --------------------2) Create a function that takes in an array of words and returns an array with all the words capitalized.
@@ -121,19 +122,19 @@ var randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction
 // Expected output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
 
 
-// describe("firstUpper", () => {
+describe("firstUpper", () => {
 
-//     // describes that the function does.
-//     it("uppercase the first letter of each word in the array", () => {
+    // describes that the function does.
+    it("uppercase the first letter of each word in the array", () => {
   
-//       //an expect method, nested within the test block, calling on the divByThree() function, followed by the .toEqual() matcher that checks the expected output of the function return.
-//       //call function (firstUpper) with arguments randomNouns1 and randomNouns2 
-//       //verify that the output is as expected
-//       expect(firstUpper(randomNouns1)).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
-//       expect(firstUpper(randomNouns2)).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
+      //an expect method, nested within the test block, calling on the divByThree() function, followed by the .toEqual() matcher that checks the expected output of the function return.
+      //call function (firstUpper) with arguments randomNouns1 and randomNouns2 
+      //verify that the output is as expected
+      expect(firstUpper(randomNouns1)).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
+      expect(firstUpper(randomNouns2)).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
       
-//     })
-// })
+    })
+})
 
 // b) Create the function that makes the test pass.
 // create function called firstUpper, with parameter array (randomNouns1, 2)
@@ -142,12 +143,12 @@ var randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction
 //join by string concatination, the upper cased value + the rest of the word (value.slice(1))
 // then return that to the new variable created (newWord)
 
-// const firstUpper = (array) => {
-//     let newWord = array.map(value => {
-//         return value.charAt(0).toUpperCase() + value.slice(1)
-//     })
-//     return newWord
-// }
+const firstUpper = (array) => {
+    let newWord = array.map(value => {
+        return value.charAt(0).toUpperCase() + value.slice(1)
+    })
+    return newWord
+}
 
 //use this to test if its working
 // console.log(firstUpper(randomNouns1))
@@ -175,18 +176,18 @@ var vowelTester2 = "academy"
 var vowelTester3 = "challenges"
 // Expected output: 2
 
-// describe("firstVowel", () => {
+describe("firstVowel", () => {
 
-//     // describes that the function does.
-//     it("finds the first vowel in the word and returns its index", () => {
+    // describes that the function does.
+    it("finds the first vowel in the word and returns its index", () => {
   
 
-//       expect(firstVowel(vowelTester1)).toEqual(1)
-//       expect(firstVowel(vowelTester2)).toEqual(0)
-//       expect(firstVowel(vowelTester2)).toEqual(2)
+      expect(firstVowel(vowelTester1)).toEqual(1)
+      expect(firstVowel(vowelTester2)).toEqual(0)
+      expect(firstVowel(vowelTester3)).toEqual(2)
 
-//     })
-// })
+    })
+})
 
 
 
@@ -202,12 +203,9 @@ const firstVowel = (array) => {
     var vowels = /[aeiou]/i;
     let firstUpper = array.search(vowels)
     return firstUpper
-
-    
-    
 }
 
-console.log(firstVowel(vowelTester3))
+// console.log(firstVowel(vowelTester3))
 
 // initial implementation was to search for all values, and compare if it is a,e,i,o,u. If it was any of them, return x. 
 // incriment x for each time it is not a vowel
