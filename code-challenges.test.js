@@ -191,11 +191,13 @@ var vowelTester3 = "challenges"
 
 
 // b) Create the function that makes the test pass.
-// reusing above code, perform same initial steps
+
 // read in array
 // set new variable as array with all the variables
-// can use regular expressions to 
-//can intiate new 
+// found online code that used regular expressions to search for values contained wtihin a string
+// I DO NOT REALLY UNDERSTAND REGULAR EXPRESSIONS, BUT I FOUND THIS CODE WORKED MY ORIGINAL WORK CAN BE FOUND BELOW.
+// this was the best i could do with an all day hangover. i apologize. 
+
 const firstVowel = (array) => {
     var vowels = /[aeiou]/i;
     let firstUpper = array.search(vowels)
@@ -209,6 +211,9 @@ console.log(firstVowel(vowelTester3))
 
 // initial implementation was to search for all values, and compare if it is a,e,i,o,u. If it was any of them, return x. 
 // incriment x for each time it is not a vowel
+// initial implementation did not work because my code incremented x for every instance of a vowel, and would not bail out at the first vowel found
+// i would use a for loop, and break statement, but for some reason, my code did not like it when i did that.
+
 // firstUpper.map((value, index) => {
 //     if (value === "u" || value === "a" || value === "i" || value === "o" || value === "e") {
 //         return x
@@ -218,4 +223,5 @@ console.log(firstVowel(vowelTester3))
 //     }
 // })
 // return x
+
 // let firstUpper = array.indexOf("")
